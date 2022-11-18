@@ -53,6 +53,7 @@ The endpoint [GET] https://jsonplaceholder.typicode.com/photos provides an array
 Together with LazyVerticalGrid, Glide and, OkHttp, the scrolling is made smoother. 
 
 **Note** You may notice slight lagging of scrolling when the app is installed with debug enabled. The reason is due to the debugging tools of Jetpack Compose. More details are provided [here](https://developer.android.com/jetpack/compose/performance). So, it is recommended to take a release build to see the performance.
+**Note** Although, the data from [GET] https://jsonplaceholder.typicode.com/photos is sufficient to load photo details view, I have also used [GET] https://jsonplaceholder.typicode.com/photos/{id} for demonstration purpose.
 
 ### 6. Implement unit tests and instrumentation tests
 Unit test for the Repository class and Instrumentation test for the View model classes have been implemented.
