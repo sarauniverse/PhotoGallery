@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DKBChallenge</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="main_appbar_title">Photos</string>
+</resources>
