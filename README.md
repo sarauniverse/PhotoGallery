@@ -63,5 +63,5 @@ Unit test for the Repository class and Instrumentation test for the View model c
 1. Swipe to refresh the grid view
 2. The data also have album id. So grouping of images as albums can be implemented.
 3. Moving to the next and previous photo details screen by swiping left an right.
-
+4. Detailed error handling to show in the UI.
 

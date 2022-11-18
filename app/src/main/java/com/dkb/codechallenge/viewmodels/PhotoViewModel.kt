@@ -8,10 +8,7 @@ import com.dkb.codechallenge.models.repo.IPhotosRepository
 import com.dkb.codechallenge.viewmodels.states.UIState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -21,7 +18,7 @@ class PhotoViewModel @Inject constructor(
 
     private val photo = MutableStateFlow<UIState<Photo>>(UIState.STARTED())
 
-    fun getPhoto(id: Long): SharedFlow<UIState<Photo>> {
+    fun getPhoto(id: Long): Flow<UIState<Photo>> {
         photo.value = UIState.STARTED()
         viewModelScope.launch {
             photosRepository.getPhoto(id).flowOn(Dispatchers.IO).collectLatest {
