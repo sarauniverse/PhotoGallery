@@ -1,7 +1,7 @@
 package com.dkb.codechallenge.models.data
 
 data class Photo(
-    val albumId: String,
+    val albumId: Long,
     val id: Long,
     val title: String,
     val url: String,
